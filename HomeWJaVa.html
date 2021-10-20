@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var auto = {
+            name: "BMW",
+            model: "x6",
+            age: "2018",
+            speed: "200"
+        };
+        var str = "";
+        function objProperties(givenObject) {
+            for (var tempProperties in auto)
+                str += tempProperties + " - " + givenObject[tempProperties] + "\n";
+            alert(str);
+        }
+        objProperties(auto);
+
+
+
+        var autom = {
+            speed: "200"
+        };
+        var str = "";
+        function countTime(givenObject) {
+            for (var speed in autom)
+                var dist = +prompt("Введите расстояние (число)");
+            str += dist / givenObject[speed]
+            alert(str);
+        }
+        countTime(autom);
+
+
+
+
+        var automm = {
+            age: "2018"
+        };
+        var str = "";
+        function countPrice(givenObject) {
+            for (var agee in automm)
+                var price = +prompt("Введите стоимость автомобиля в 2018 году (число)");
+                var price2019 = ((price * 5 )/100) + price;
+                var price2020 = ((price2019 * 5)/100) + price2019;
+                var price2021 = ((price2020 * 5)/100) + price2020;
+            str += givenObject[agee] + " - " + price + "\n"+"2019" + " - " + price2019 + "\n"+"2020" + " - " + price2020 + "\n" +"2021" + " - " + price2021;
+            alert(str);
+        }
+        countPrice(automm);
+
+
+    </script>
+
+</body>
+
+</html>
